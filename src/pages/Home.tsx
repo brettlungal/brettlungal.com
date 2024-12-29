@@ -1,37 +1,19 @@
-import React, {useState} from 'react'
-
-import reactLogo from '../assets/react.svg'
-import viteLogo from '../../public/vite.svg'
-
-import '../App.css'
-
+import React from 'react';
+import {Typography, Grid2, Paper} from '@mui/material'
 const Home: React.FC = () => {
-    const [count, setCount] = useState<number>(0);
-
-    return (    
-    <>
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </>
-      )
-}
+  return (
+   <Grid2 container spacing={2}>
+      <Grid2 display="flex" justifyContent="center" alignItems="center" size={4}>
+        <Paper elevation={3} sx={{width:'100%', height:'50vh'}}>Grid1</Paper>
+      </Grid2>
+      <Grid2 display="flex" justifyContent="center" alignItems="center" size={4}>
+        <Paper elevation={3} sx={{width:'100%', height:'50vh'}}>Grid2</Paper>
+      </Grid2>
+      <Grid2 display="flex" justifyContent="center" alignItems="center" size={4}>
+        <Paper elevation={3} sx={{width:'100%', height:'50vh'}}>Grid3</Paper>
+      </Grid2>
+   </Grid2>
+  );
+};
 
 export default Home;
