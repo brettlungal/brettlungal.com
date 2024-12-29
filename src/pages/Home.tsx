@@ -1,12 +1,12 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../../public/vite.svg'
 
 import '../App.css'
 
-const Home = () => {
-    const [count, setCount] = useState(0);
+const Home: React.FC = () => {
+    const [count, setCount] = useState<number>(0);
 
     return (    
     <>
