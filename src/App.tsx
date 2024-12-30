@@ -31,9 +31,6 @@ function App() {
     },
     palette: {
       mode: darkMode ? 'dark' : 'light',
-      background:{
-        default: darkMode ? darkBackground : lightBackground
-      },
       primary: primary,
       secondary: secondary,
       divider: darkMode ? "#fff" : "#121212"
