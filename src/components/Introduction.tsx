@@ -22,7 +22,7 @@ const Introduction: React.FC = () => {
                 </Box>
                 , A Software Developer
             </Typography>
-            <Typography variant="subtitle2" sx={{ display: 'flex', marginLeft: '7%', marginTop: '8%' }}>I like to build scalable, performant solutions primarily focusing on backend development. I am a self-starter and leader which has helped me succeed in my current position as a lead developer at QDoc Inc. </Typography>
+            <Typography variant="body1" sx={{ display: 'flex', marginLeft: '7%', marginTop: '8%' }}>I like to build scalable, performant solutions primarily focusing on backend development. I am a self-starter and leader which has helped me succeed in my current position as a lead developer at QDoc Inc. </Typography>
         </>
     )
 }
