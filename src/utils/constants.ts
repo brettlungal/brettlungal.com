@@ -1,4 +1,4 @@
-export const pages: string[] = ['Home', 'Portfolio', 'Contact'];
+export const pages: string[] = ['Home','About', 'Portfolio', 'Contact'];
 
 export const primary = {
     main: '#FF7518',

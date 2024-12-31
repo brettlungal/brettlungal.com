@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Paper, GlobalStyles } from '@mui/material'
+import { GlobalStyles } from '@mui/material'
 import Home from './pages/Home';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact'
 import NavBar from './components/NavBar'
 import CssBaseline from '@mui/material/CssBaseline';
 import { primary, secondary, lightBackground, darkBackground } from './utils/constants'
+
+import { Route } from 'wouter';
 
 
 
@@ -52,7 +57,10 @@ function App() {
       <ThemeProvider theme={appTheme}>
         <CssBaseline />
           <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Home />
+          <Route path="/"><Home /></Route>
+          <Route path="/About"><About /></Route>
+          <Route path="/Portfolio"><Portfolio /></Route>
+          <Route path="/Contact"><Contact /></Route>
       </ThemeProvider>
     </>
   )

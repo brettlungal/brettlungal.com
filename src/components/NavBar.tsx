@@ -6,9 +6,19 @@ import ThemeToggle, {ThemeToggleProps} from './ThemeToggle'
 import {pages} from '../utils/constants'
 import {useTheme} from '@mui/material/styles'
 
+import { useLocation } from 'wouter';
+
 
 const NavBar: React.FC<any> = ({darkMode, setDarkMode}: ThemeToggleProps) => {
     const theme = useTheme();
+    const [, navigate] = useLocation();
+
+
+    const handleRouting = (event:any) => {
+      const route = event.target.innerText.replace(' ','').replace("Home",'/')
+      navigate(route)
+    }
+
   return (
     <AppBar
       position="static"
@@ -22,6 +32,7 @@ const NavBar: React.FC<any> = ({darkMode, setDarkMode}: ThemeToggleProps) => {
           {pages.map((item) => (
             <Typography
                 key={item}
+                onClick={handleRouting}
                 sx={{
                     marginRight: '2%',
                     cursor: 'pointer',
